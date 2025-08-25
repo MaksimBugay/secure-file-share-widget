@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Share - Live Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .demo-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 30px;
+            text-align: center;
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .demo-header {
+            margin-bottom: 30px;
+        }
+        
+        .demo-header h1 {
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .demo-header p {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .iframe-container {
+            border: 3px solid #4CAF50;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
+            background: white;
+        }
+        
+        .demo-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+        
+        .demo-info {
+            margin-top: 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, #E8F5E8, #F1F8E9);
+            border-radius: 10px;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .demo-info h3 {
+            color: #2E7D32;
+            margin-bottom: 10px;
+        }
+        
+        .demo-info p {
+            color: #333;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        
+        .links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .link-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .link-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .link-btn.secondary {
+            background: #2196F3;
+        }
+        
+        .link-btn.secondary:hover {
+            background: #1976D2;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .demo-container {
+                padding: 20px;
+            }
+            
+            .demo-header h1 {
+                font-size: 2em;
+            }
+            
+            .demo-iframe {
+                height: 500px;
+            }
+            
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .demo-iframe {
+                height: 400px;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-header">
+            <h1>🔐 Secure File Share</h1>
+            <p>Live Demo - Try the secure file sharing service below</p>
+        </div>
+        
+        <div class="iframe-container">
+            <iframe 
+                src="https://secure.fileshare.ovh/file-sharing-embedded.html" 
+                class="demo-iframe"
+                title="Secure File Share Service"
+                loading="lazy"
+                allow="clipboard-read; clipboard-write"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals">
+                <p>Your browser does not support iframes. Please visit 
+                <a href="https://secure.fileshare.ovh/file-sharing-embedded.html" target="_blank">
+                    Secure File Share
+                </a> directly.</p>
+            </iframe>
+        </div>
+        
+        <div class="demo-info">
+            <h3>🎯 How to Use:</h3>
+            <p><strong>Note:</strong> Due to browser security restrictions, clipboard access may not work in this iframe demo.</p>
+            <p><strong>1.</strong> Choose security option: Password (for encryption) OR Strong captcha (for bot protection)</p>
+            <p><strong>2.</strong> Add optional description for your files</p>
+            <p><strong>3.</strong> Select files by browsing or drag & drop (Ctrl+V may not work in iframe)</p>
+            <p><strong>4.</strong> Upload starts automatically - share the generated link securely!</p>
+            <p style="color: #ff6600; font-weight: bold;">For full functionality including clipboard paste, use the "Open in New Tab" link below.</p>
+        </div>
+        
+        <div class="links">
+            <a href="secure-fileshare-documentation.html" class="link-btn">
+                📖 Full Documentation
+            </a>
+            <a href="privacy-policy.html" class="link-btn secondary">
+                🔒 Privacy Policy
+            </a>
+            <a href="https://secure.fileshare.ovh/file-sharing-embedded.html" target="_blank" class="link-btn">
+                🌐 Open in New Tab
+            </a>
+        </div>
+    </div>
+
+
+</body>
+</html>
